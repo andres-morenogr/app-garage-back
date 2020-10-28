@@ -1,10 +1,16 @@
 global.fetch = require('node-fetch');
+
+const {
+  USER_POOL_ID,
+  CLIENT_ID
+} = require('./../../../config/config');
+
 global.navigator = () => null;
 
 const AmazonCognitoIdentity = require('amazon-cognito-identity-js');
 const poolData = {
-  UserPoolId: "us-east-2_vU6xbdk67",
-  ClientId: "5rh37pqcqaqpqgv8ieoplfvv5c"
+  UserPoolId: USER_POOL_ID,
+  ClientId: CLIENT_ID
 };
 const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
