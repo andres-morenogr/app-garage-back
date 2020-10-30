@@ -4,8 +4,6 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "lint": "eslint ./ --fix",
-    "test": "jest",
     "start": "node app.js"
   },
   "dependencies": {
