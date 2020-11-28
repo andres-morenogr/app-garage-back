@@ -19,14 +19,14 @@ const getAll = async () => {
 }
 
 const update = async (id, body) => {
-  const vehicle = new Vehicle({
+  const vehicle = {
     plate: body.plate,
     color: body.color,
     type: body.type,
     brand: body.brand,
     model: body.model,
     author: body.author
-  });
+  };
   return await Vehicle.findByIdAndUpdate(id, vehicle, {new:true}).exec();
 }
 

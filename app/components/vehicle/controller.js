@@ -18,7 +18,7 @@ const getAll = async (res) => {
 
 const update = async (req, res) => {
   try {
-    const vehicle = await util.update(req.body.id ,req.body);
+    const vehicle = await util.update(req.params.id ,req.body);
     const ans = {
       message: "Vehículo actualizado exitosamente",
       data: vehicle
