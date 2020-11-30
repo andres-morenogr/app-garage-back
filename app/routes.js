@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const userValidate = require('./middlewares/validateUser');
 
 const router = new Router();
 
@@ -8,6 +9,6 @@ const vehicle = require('./components/vehicle/route');
 
 router.use('/auth/signup', signup);
 router.use('/auth/login', login);
-router.use('/vehicle', vehicle)
+router.use('/vehicle', userValidate.Validate, vehicle)
 
 module.exports = router;
