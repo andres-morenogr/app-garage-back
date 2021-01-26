@@ -19,7 +19,7 @@ module.exports.Validate = function(req, res, next){
            json : true
         }, function(error, response, body){
            if (!error && response.statusCode === 200) {
-               pems = {};
+               let pems = {};
                var keys = body['keys'];
                for(var i = 0; i < keys.length; i++) {
                     var key_id = keys[i].kid;
